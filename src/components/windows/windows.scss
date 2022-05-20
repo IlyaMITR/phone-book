@@ -1,0 +1,39 @@
+.window-bg{
+	position: absolute;
+	height: 100vw;
+	width: 100vw;
+	background-color: rgba(0, 0, 0, 0.40);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	place-self: center;
+	.window{
+		display: flex;
+		border-radius: 0.5em;
+		background: linear-gradient(-45deg, #6a2f3b, #39606a);
+		flex-direction: column;
+		color: #fff;
+		padding: 2em;
+		box-shadow: 0 0 2em -0.5em #000;
+		&__head{
+			font-size: 2em;
+			text-align: center;
+			font-weight: 600;
+		}
+		&__body{
+			margin-top: 1em;
+			form{
+				display: flex;
+				flex-direction: column;
+				label{
+					background-color: rgba(0, 0, 0, 0.219);
+					padding: .5em 1em;
+					margin-bottom: .5em;
+				}
+				.warning {
+					color: #fffa00;
+				}
+			}
+		}
+	}
+}

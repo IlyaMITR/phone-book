@@ -1,0 +1,106 @@
+.phone-book{
+	width: 100%;
+	position: absolute;
+	top: 5em;
+	display: grid;
+	grid-template: repeat(2, max-content)/repeat(3, 1fr);
+	&__list{
+		overflow-y: scroll;
+		min-height: max-content;
+		max-height: 75vh;
+		padding:0 1em 0 0;
+		border-bottom: .25em solid #00cbff;
+		grid-column: 2;
+		grid-row: 2;
+	}
+
+	&-item{
+		cursor: pointer;
+		display: grid;
+		align-items: baseline;
+		grid-template: 1fr 1fr/3fr 1fr;
+		border-radius: .5em;
+		color: #ffffff;
+		background-color: rgba(0, 0, 0, 0.18);
+		padding:1em 2em;
+		margin-bottom: .5em;
+		transition: .2s;
+		&__name{
+			font-size: 1.5em;
+		}
+		&__control{
+			align-self: center;
+			width: max-content;
+			transition: .2s;
+			color: #00ccffb6;
+			padding: 0.125em 0.25em;
+			border-radius: 0.25em;
+			&:hover{
+				background-color: rgb(0 204 255 / 12%);
+			}
+		}
+		&:hover{
+			background-color: rgba(0, 0, 0, 0.25);
+		}
+		label.edit{
+			width: max-content;
+			background-color: rgba(0, 0, 0, 0.18);
+			padding: .5em;
+			&.not-filled{
+				box-shadow: inset 0 0 0 1px #ff5700;
+			}
+		}
+	}
+	.add-button{
+		cursor: pointer;
+		grid-row: 1;
+		grid-column: 1;
+		background-color: rgba(0, 0, 0, 0.3);
+		border-radius: .5em;
+		padding-inline: 1.25em;
+		height: 4em;
+		border: none;
+		color: #ccc;
+		transition: .2s;
+		width: max-content;
+		justify-self: end;
+		margin-right: 1em;
+		&:hover{
+			color: #fff;
+		}
+		&::before{
+			content: '\002B';
+			font-size: 3em;
+		}
+	}
+	.user-info{
+		grid-row: 1;
+		grid-column: 3;
+		display: flex;
+		flex-direction: column;
+		margin-left: 9em;
+		padding: 1em 2em;
+		height: max-content;
+		background-color: rgba(0, 0, 0, 0.3);
+		border-radius: 0.5em;
+		width: max-content;
+		&__name{
+			color: #fff;
+			font-size: 2em;
+			margin-bottom: 0.3em;
+		}
+		&__quit{
+			cursor: pointer;
+			background-color: rgba(0, 0, 0, 0.3);
+			color: #aaa;
+			border: 1px solid transparent;
+			border-radius: 0.3em;
+			padding: 0.25em 0;
+			transition: .2s;
+			&:hover{
+				color: #00cbff;
+				border-color: #00cbff;
+			}
+		}
+	}
+}

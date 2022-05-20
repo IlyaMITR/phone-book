@@ -1,0 +1,17 @@
+.search-panel{
+	margin-bottom: 2.5em;
+	grid-column: 2;
+	grid-row: 1;
+	label{
+		display: flex;
+		padding: .5em;
+		background-color: rgba(0, 0, 0, 0.3);
+		font-size: 1.5em;
+		color: #ccc;
+		margin-bottom: 1em;
+		input{
+			font-size: .7em;
+			width: 100%;
+		}
+	}
+}
